@@ -1,0 +1,39 @@
+@import "../../common/constants.scss";
+
+.home {
+   width: 100vw;
+   height: 100vh;
+   background-image: url(../../assets/home_img.jpeg);
+   background-size: cover;
+   background-position: 60% center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   &__headline {
+        padding: 0 20px 0 20px;
+        font-weight: 100;
+        margin-bottom: 30px;
+        font-size: 36px;
+        @media (min-width: $mobile ) and (max-width: $tablet) {
+            font-size: 60px;
+        }
+        @media (min-width: $tablet) {
+            font-size: 80px;
+        }
+   }
+
+   &__tagline {
+        padding: 0 20px 0 20px;
+        font-size: 50px;
+        font-weight: 100;
+        font-size: 24px;
+        @media (min-width: $mobile ) and (max-width: $tablet) {
+            font-size: 40px;
+        }
+        @media (min-width: $tablet) {
+            font-size: 60px;
+        }
+   }
+}
