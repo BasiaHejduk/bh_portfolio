@@ -1,0 +1,29 @@
+@import "../../common/constants.scss";
+
+.menu {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    border-bottom: 1px solid rgb(130, 131, 133);
+    @media (max-width: $mobile) {
+        visibility: hidden;
+    }
+
+    &__list {
+        max-width: 60%;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (min-width: $tablet) {
+            max-width: 40%;
+        }
+    }
+
+    &__item {
+        font-weight: 300;
+        font-size: 18px;
+        padding: 20px 0 20px;
+    }
+}
