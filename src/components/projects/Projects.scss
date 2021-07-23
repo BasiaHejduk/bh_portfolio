@@ -3,4 +3,53 @@
 .projects {
     background-color: $background-color;
     min-height: 100vh;
+    padding: 100px 30px;
+    @media (min-width:$mobile) and (max-width:$tablet) {
+        padding: 150px 100px;
+    }
+    @media (min-width:$tablet) {
+        padding: 100px 250px;
+    }
+
+    &__title {
+        @include title();
+    }
+
+    &__grid {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 40vh);
+        @media (min-width:$tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 80vh);
+        }
+    }
+
+    &__single {
+        background-color:darkgrey;
+
+        &--1 {
+            grid-row: 1/2;
+            @media (min-width:$tablet) {
+                grid-column: 1/3;
+                grid-row: 1/2;
+            }
+        }
+        &--2 {
+            grid-row: 2/3;
+            @media (min-width:$tablet) {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+        }
+        &--3 {
+            grid-row: 3/4;
+            @media (min-width:$tablet) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+        }
+    }
 }

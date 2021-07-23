@@ -7,3 +7,20 @@ $tablet: 1022px;
 $desktop: 1200px;
 
 $background-color: rgb(33, 53, 62);
+
+@mixin title() {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    @media (min-width:$mobile) and (max-width:$tablet) {
+        font-size: 30px;
+    }
+    @media (min-width:$tablet) {
+        font-size: 30px;
+    }
+};
+
+.hidden {
+    display: none;
+}

@@ -6,7 +6,7 @@
     position: fixed;
     border-bottom: 1px solid rgb(130, 131, 133);
     @media (max-width: $mobile) {
-        visibility: hidden;
+        display: none;
     }
 
     &__list {
@@ -25,5 +25,6 @@
         font-weight: 300;
         font-size: 18px;
         padding: 20px 0 20px;
+        cursor: pointer;
     }
 }

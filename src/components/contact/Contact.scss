@@ -1,0 +1,67 @@
+@import "../../common/constants.scss";
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/contact_img.jpeg);
+    background-size: cover;
+    background-position: top right;
+    padding: 100px 30px;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    @media (min-width:$mobile) and (max-width:$tablet) {
+        padding: 150px 100px;
+        font-size: 40px;
+    }
+    @media (min-width:$tablet) {
+        padding: 100px 250px;
+        font-size: 40px;
+    }
+
+    &__title {
+        @include title();
+    }
+    
+    &__grid {
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        @media (min-width:$tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
+    &__tel {
+        text-decoration: none;
+        color: white;
+        align-self: end;
+        @media (min-width:$tablet) {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+    }
+
+    &__mail {
+        text-decoration: none;
+        color: white;
+        align-self: end;
+        @media (min-width:$tablet) {
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+    }
+
+    &__git {
+        text-decoration: none;
+        color: white;
+        align-self: end;
+        @media (min-width:$tablet) {
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+    }
+}
