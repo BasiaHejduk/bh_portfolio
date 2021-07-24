@@ -7,6 +7,11 @@ const Menu = () => {
 
     useEffect(() => {
 
+        const menu = document.querySelector(".menu");
+        const tl = gsap.timeline({defaults: {ease: "power3.inOut"}});
+        gsap.set(menu, {autoAlpha:0});
+        tl.fromTo(menu, {rotationX: 45, transformOrigin: "0% -50% 50%"}, {duration: 2, delay: 4, rotationX: 0, autoAlpha: 1})
+
         document.addEventListener("scroll", changeMenuColor);
 
     },[]);

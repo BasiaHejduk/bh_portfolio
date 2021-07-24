@@ -8,6 +8,11 @@ const MobileMenu = () => {
 
     useEffect(() => {
 
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const tl = gsap.timeline({defaults: {ease: "power3.inOut"}});
+        gsap.set(mobileMenu, {autoAlpha:0});
+        tl.fromTo(mobileMenu, {rotationX: 60, transformOrigin: "0% -50% 50%"}, {duration: 1.5, delay: 4, rotationX: 0, autoAlpha: 1})
+
         document.addEventListener("scroll", changeMenuColor);
 
     },[]);
