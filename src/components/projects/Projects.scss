@@ -27,7 +27,7 @@
         background-position: center;
 
         &--1 {
-            background-image: url(../../assets/ha_www.png);
+            background-image: url(../../assets/ha_www_small.png);
             grid-row: 1/2;
             @media (min-width:$tablet) {
                 grid-column: 1/3;
