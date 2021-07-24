@@ -4,12 +4,6 @@
     background-color: $background-color;
     min-height: 100vh;
     padding: 100px 30px;
-    @media (min-width:$mobile) and (max-width:$tablet) {
-        padding: 150px 100px;
-    }
-    @media (min-width:$tablet) {
-        padding: 100px 250px;
-    }
 
     &__title {
         @include title();
@@ -29,8 +23,11 @@
 
     &__single {
         background-color:darkgrey;
+        background-size: cover;
+        background-position: center;
 
         &--1 {
+            background-image: url(../../assets/ha_www.png);
             grid-row: 1/2;
             @media (min-width:$tablet) {
                 grid-column: 1/3;
@@ -38,6 +35,7 @@
             }
         }
         &--2 {
+            background-image: url(../../assets/best_shop.png);
             grid-row: 2/3;
             @media (min-width:$tablet) {
                 grid-column: 1/2;

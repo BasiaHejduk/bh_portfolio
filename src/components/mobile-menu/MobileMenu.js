@@ -1,10 +1,27 @@
 import gsap from "gsap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./MobileMenu.scss";
 import { scroller } from "react-scroll";
 
 const MobileMenu = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
+
+    useEffect(() => {
+
+        document.addEventListener("scroll", changeMenuColor);
+
+    },[]);
+
+
+    const changeMenuColor = () => {
+        const menu = document.querySelector(".mobile-menu");
+        const tl = gsap.timeline({defaults: {ease: "power3.inOut"}});
+        if (window.scrollY > 50) {
+            tl.to(menu, {duration: 0.5, backgroundColor: "rgb(33, 53, 62)"});
+        } else if (window.scrollY < 50) {
+            tl.to(menu, {duration: 0.5, backgroundColor: "transparent"});
+        }
+    };
 
     const animateHamburger = () => {
         const hamburger = document.querySelectorAll(".mobile-menu__hamburger-item");
