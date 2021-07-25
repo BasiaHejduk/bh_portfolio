@@ -14,6 +14,7 @@ const Projects = () => {
                                             name={singleProject.name} 
                                             id={singleProject.id}
                                             key={singleProject.key}
+                                            link={singleProject.link}
                                     ></SingleProject>
                         })
                     }
