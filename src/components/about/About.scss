@@ -86,16 +86,12 @@
     }
 
     &__technologies-icon {
+        visibility: hidden;
         background-size: cover;
         background-position: center;
         width: 100%;
         padding-bottom: 100%;
-        @media (min-width:$mobile) and (max-width:$tablet) {
-            // height: 100px;
-        }
-        @media (min-width:$tablet) {
-            // height: 150px;
-        }
+        position: relative;
 
         &--html {
             background-image: url(../../assets/html_icon.png);
@@ -162,6 +158,23 @@
                 grid-row: 2/3;
                 grid-column: 6/8;
             }
+        }
+    }
+
+    &__technologies-details {
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $grey-color;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+        @media (min-width: $tablet) {
+            font-size: 20px;
         }
     }
 }
