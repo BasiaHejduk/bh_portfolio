@@ -70,7 +70,7 @@ const About = () => {
                         <div className="about__technologies-icon about__technologies-icon--css" 
                             onMouseEnter={(e)=> showDetails(e)}>
                             <div className="about__technologies-details"
-                                onMouseLeave={(e)=> hideDetails(e)}><span>CSS</span>
+                                onMouseLeave={(e)=> hideDetails(e)}><span>CSS3</span>
                             </div>
                         </div>
                         <div className="about__technologies-icon about__technologies-icon--js" 
