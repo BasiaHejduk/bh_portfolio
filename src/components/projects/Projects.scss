@@ -28,7 +28,7 @@
         background-position: center;
 
         &--1 {
-            background-image: url(../../assets/ha_www_small.png);
+            background-image: url(../../assets/makeup.JPG);
             grid-row: 1/2;
             @media (min-width:$tablet) {
                 grid-column: 1/3;
@@ -36,7 +36,7 @@
             }
         }
         &--2 {
-            background-image: url(../../assets/best_shop.png);
+            background-image: url(../../assets/second_life.JPG);
             grid-row: 2/3;
             @media (min-width:$tablet) {
                 grid-column: 1/2;
@@ -44,6 +44,7 @@
             }
         }
         &--3 {
+            background-image: url(../../assets/best_shop.png);
             grid-row: 3/4;
             @media (min-width:$tablet) {
                 grid-column: 2/3;
@@ -55,7 +56,7 @@
     &__cover {
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.7);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -73,7 +74,7 @@
     }
 
     &__name {
-        font-weight: 300;
+        font-weight: 500;
         font-size: 16px;
         @media (min-width: $mobile) {
             font-size: 30px;
@@ -81,12 +82,23 @@
 
     }
 
+    &__details {
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 12px;
+        @media (min-width: $mobile) {
+            font-size: 20px;
+        }
+    }
+
     &__link {
+        width: 100px;
         background-color: $grey-color;
         border: none;
         border-radius: 7%;
         color: white;
         text-decoration: none;
+        text-align: center;
         padding: 5px;
         margin-top: 20px;
         font-size: 12px;

@@ -3,7 +3,7 @@ import "./Projects.scss";
 import { contentProjects } from "./contentProjects";
 import gsap from "gsap";
 
-const SingleProject = ({name, id, link}) => {
+const SingleProject = ({name, id, link, details}) => {
     const [infoVisibility, setInfoVisibility] = useState(false);
 
     useEffect(() => {
@@ -42,7 +42,8 @@ const SingleProject = ({name, id, link}) => {
                 style={{visibility: infoVisibility ? "visible" : "hidden"}}>
                 <div className="projects__info">
                     <p className="projects__name">{name}</p>
-                    <a className="projects__link" href={link} target="_blank" rel="noreferrer">ZOBACZ</a>
+                    <p className="projects__details">{details}</p>
+                    <a className="projects__link" href={link} target="_blank" rel="noreferrer">MORE</a>
                 </div>
             </div>
         </div>

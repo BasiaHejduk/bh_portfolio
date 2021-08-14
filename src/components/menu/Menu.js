@@ -1,7 +1,7 @@
-import "./Menu.scss";
+import { useEffect} from "react";
 import {scroller} from "react-scroll";
 import gsap from "gsap";
-import { useEffect} from "react";
+import "./Menu.scss";
 
 const Menu = () => {
 
@@ -21,7 +21,6 @@ const Menu = () => {
 
         const highlightMenuItem = (entries, ob, element) => {
             const tl = gsap.timeline({defaults: {ease: "power3.inOut"}});
-
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
                     tl  
@@ -52,7 +51,6 @@ const Menu = () => {
 
     },[]);
 
-
     const changeMenuColor = () => {
         const menu = document.querySelector(".menu");
         const tl = gsap.timeline({defaults: {ease: "power3.inOut"}});
@@ -71,9 +69,9 @@ const Menu = () => {
         <div className="menu">
             <ul className="menu__list">
                 <li id="home-item" className="menu__item" onClick={()=> handleOnClickMenu("home")}>HOME</li>
-                <li id="about-item" className="menu__item" onClick={()=> handleOnClickMenu("about")}>O MNIE</li>
-                <li id="projects-item" className="menu__item" onClick={()=> handleOnClickMenu("projects")}>PROJEKTY</li>
-                <li id="contact-item" className="menu__item" onClick={()=> handleOnClickMenu("contact")}>KONTAKT</li>
+                <li id="about-item" className="menu__item" onClick={()=> handleOnClickMenu("about")}>ABOUT</li>
+                <li id="projects-item" className="menu__item" onClick={()=> handleOnClickMenu("projects")}>PROJECTS</li>
+                <li id="contact-item" className="menu__item" onClick={()=> handleOnClickMenu("contact")}>CONTACT</li>
             </ul>
         </div>
     )

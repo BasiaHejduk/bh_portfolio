@@ -1,7 +1,7 @@
-import gsap from "gsap";
 import { useEffect, useState } from "react";
-import "./MobileMenu.scss";
 import { scroller } from "react-scroll";
+import gsap from "gsap";
+import "./MobileMenu.scss";
 
 const MobileMenu = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -16,7 +16,6 @@ const MobileMenu = () => {
         document.addEventListener("scroll", changeMenuColor);
 
     },[]);
-
 
     const changeMenuColor = () => {
         const menu = document.querySelector(".mobile-menu");
@@ -78,13 +77,12 @@ const MobileMenu = () => {
                 <div className="mobile-menu__hamburger-item"></div>
             </div>
         </div>
-
         <div className="mobile-menu__navigation">
             <ul className="mobile-menu__list">
                 <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("home"); showNavigation()}}>HOME</li>
-                <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("about"); showNavigation()}}>O MNIE</li>
-                <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("projects"); showNavigation()}}>PROJEKTY</li>
-                <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("contact"); showNavigation()}}>KONTAKT</li>
+                <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("about"); showNavigation()}}>ABOUT</li>
+                <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("projects"); showNavigation()}}>PROJECTS</li>
+                <li className="mobile-menu__item" onClick={()=> {handleOnClickMobileMenu("contact"); showNavigation()}}>CONTACT</li>
             </ul>
         </div>
         </>

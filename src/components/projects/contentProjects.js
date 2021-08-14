@@ -1,21 +1,24 @@
 
 export const contentProjects = [
     {
-        name: "HEJDUK ARCHITEKCI",
+        name: "MAKEUP E-COMMERCE",
+        details: "desktop & mobile",
         id: "1",
         key: "1",
-        link: "https://stupefied-heisenberg-ec07d4.netlify.app/"
+        link: "https://goofy-ritchie-5e76f5.netlify.app/"
+    },
+    {
+        name: "SECOND LIFE",
+        details: "desktop only",
+        id: "2",
+        key: "2",
+        link: "https://upbeat-jang-c3f0bd.netlify.app/"
     },
     {
         name: "BEST SHOP",
-        id: "2",
-        key: "2",
-        link: "https://basiahejduk.github.io/BestShop/"
-    },
-    {
-        name: "LAST PROJECT",
+        details: "desktop & mobile",
         id: "3",
         key: "3",
-        link: "https://github.com/BasiaHejduk"
+        link: "https://basiahejduk.github.io/BestShop/"
     }
 ]
