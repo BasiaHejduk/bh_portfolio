@@ -16,6 +16,7 @@ const Projects = () => {
                                             key={singleProject.key}
                                             link={singleProject.link}
                                             details={singleProject.details}
+                                            tech={singleProject.tech}
                                     ></SingleProject>
                         })
                     }
