@@ -18,7 +18,7 @@ $grey-color: rgb(147, 149, 153);
     top: -50px;
     left: 0;
     z-index: 0;
-}
+};
 
 @mixin title() {
     text-align: center;
@@ -36,12 +36,11 @@ $grey-color: rgb(147, 149, 153);
     &::before {
         @include line();
     }
-
 };
 
 .hidden {
     display: none;
-}
+};
 
 .wrapper {
     margin: 0 auto;
@@ -50,5 +49,5 @@ $grey-color: rgb(147, 149, 153);
     @media (min-width: $tablet) {
         max-width: 1000px;
     }
-}
+};
 

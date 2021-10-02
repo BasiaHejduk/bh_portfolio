@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitTextJS from 'split-text-js';
 import "./Home.scss"
 
 const Home = () => {
+    const homeWrapper = useRef(null);
 
     useEffect(() => {
-
-        const home = document.querySelector(".home");
-        const headline = document.querySelector(".home__headline");
-        const tagline = document.querySelector(".home__tagline");
+        const home = homeWrapper.current;
+        const headline = homeWrapper.current.children[0];
+        const tagline = homeWrapper.current.children[1];
         const splitHeadline = new SplitTextJS(headline);
         let i;
 
@@ -24,7 +24,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="home" name="home">
+        <div ref={homeWrapper} className="home" name="home">
             <p className="home__headline">Front-End Developer</p>
             <p className="home__tagline">Basia Hejduk</p>
         </div>

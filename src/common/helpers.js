@@ -1,8 +1,6 @@
-
 export let options = {
     root: null,
     rootMargin: "-20px"
-    // threshold: 0.05
 };
 
 export const beTouching = (entries, ob, elementName) => {

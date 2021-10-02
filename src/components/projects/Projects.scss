@@ -85,15 +85,6 @@
 
     }
 
-    &__details {
-        margin-top: 20px;
-        font-weight: 300;
-        font-size: 12px;
-        @media (min-width: $mobile) {
-            font-size: 20px;
-        }
-    }
-
     &__link {
         width: 100px;
         background-color: $grey-color;
