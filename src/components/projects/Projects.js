@@ -11,10 +11,12 @@ const Projects = () => {
                     {
                         contentProjects.map((singleProject) => {
                             return <SingleProject 
-                                            name={singleProject.name} 
+                                            name={singleProject.name}
+                                            description={singleProject.description} 
                                             id={singleProject.id}
                                             key={singleProject.key}
-                                            link={singleProject.link}
+                                            demo={singleProject.demo}
+                                            repo={singleProject.repo}
                                             tech={singleProject.tech}
                                     ></SingleProject>
                         })

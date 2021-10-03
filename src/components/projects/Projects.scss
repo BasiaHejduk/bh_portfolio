@@ -17,16 +17,14 @@
         grid-template-rows: repeat(3, 40vh);
         @media (min-width:$tablet) {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 80vh);
+            grid-template-rows: repeat(2, 70vh);
         }
     }
 
     &__single {
         visibility: hidden;
-        background-color:darkgrey;
         background-size: cover;
         background-position: center;
-
         &--1 {
             background-image: url(../../assets/makeup.JPG);
             grid-row: 1/2;
@@ -36,8 +34,9 @@
             }
         }
         &--2 {
-            background-image: url(../../assets/second_life.JPG);
+            background-image: url(../../assets/second_life3.JPG);
             grid-row: 2/3;
+            background-position: left;
             @media (min-width:$tablet) {
                 grid-column: 1/2;
                 grid-row: 2/3;
@@ -56,15 +55,10 @@
     &__cover {
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.75);
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-
-        @media (max-width: $tablet) {
-            visibility: visible !important;
-        }
+        align-items: center;
     }
 
     &__info {
@@ -85,39 +79,94 @@
 
     }
 
+    &__description {
+        max-width: 250px;
+        font-weight: 200;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 5px;
+        @media (min-width: $mobile) {
+            max-width: 350px;
+            font-size: 20px;
+        }
+    }
+
+    &__links-wrapper {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        @media (min-width: $mobile) {
+            width: 300px;
+        }
+    }
+
     &__link {
-        width: 100px;
+        width: 90px;
+        height: 30px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
         background-color: $grey-color;
         border: none;
-        border-radius: 7%;
+        border-radius: 40px;
         color: white;
         text-decoration: none;
-        text-align: center;
-        padding: 5px;
+        padding: 0 10px;
         margin-top: 20px;
-        font-size: 12px;
-        transition: background-color 0.5s;
+        font-size: 14px;
+        transition: background-color 0.5s, box-shadow 0.5s;
         @media (min-width: $mobile) {
+            width: 140px;
+            height: 40px;
             font-size: 20px;
-            padding: 10px;
+            padding: 0 20px;
             margin-top: 30px;
         }
-
         &:hover {
             background-color: $background-color;
+            box-shadow: 0px 0px 18px 0px rgba(138, 138, 138, 1);
+        }
+    }
+
+    &__link-icon {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        &--demo {
+            background-image: url(../../assets/link.svg);
+        }
+        &--repo {
+            background-image: url(../../assets/git-branch.svg);
+        }
+        @media (min-width: $mobile) {
+            width: 24px;
+            height: 24px;
         }
     }
 
     &__technologies {
-        text-align: center;
-        margin-bottom: 20px;
-        font-weight: 300;
-        font-size: 10px;
-        line-height: 14px;
-        padding: 0 40px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 5px;
         @media (min-width: $mobile) {
-            font-size: 18px;
+            padding: 20px 10px;
+        }
+    }
+
+    &__single-tech {
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0 5px;
+        text-transform: lowercase;
+        @media (min-width: $mobile) {
+            font-size: 20px;
             line-height: 24px;
+            color: $grey-color;
+            padding: 0 10px;
         }
     }
 }
