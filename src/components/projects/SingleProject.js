@@ -26,7 +26,7 @@ const SingleProject = ({name, description, id, demo, repo, tech}) => {
         });
     }, [])
 
-    const showTechnologies = () => {
+    const changeColor = () => {
         const technologies = technologiesWrapper.current.children;
         gsap.to(technologies, {
             color: "white",
@@ -34,7 +34,7 @@ const SingleProject = ({name, description, id, demo, repo, tech}) => {
             stagger: 0.1
         })
     }
-    const returnTechnologies = () => {
+    const returnColor = () => {
         const technologies = technologiesWrapper.current.children;
         gsap.to(technologies, {
             color: "rgb(147, 149, 153)", 
@@ -45,7 +45,7 @@ const SingleProject = ({name, description, id, demo, repo, tech}) => {
 
     return (        
         <div ref={projectWrapper} className={`projects__single projects__single--${id}`}
-            onMouseEnter={showTechnologies} onMouseLeave={returnTechnologies}>
+            onMouseEnter={changeColor} onMouseLeave={returnColor}>
             <div className="projects__cover">
                 <div className="projects__info">
                     <p className="projects__name">{name}</p>
